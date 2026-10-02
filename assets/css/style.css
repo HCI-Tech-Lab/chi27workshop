@@ -122,10 +122,16 @@ button { font:inherit; }
 .people-heading { display:flex; justify-content:space-between; gap:2rem; align-items:end; margin-bottom:1.2rem; }
 .people-heading span { color:#475569; font-size:.62rem; font-weight:700; letter-spacing:.12em; }
 .people-heading p { max-width:520px; margin:0; color:#475569; font-size:.72rem; text-align:right; }
-.people-heading.assistants { margin-top:4rem; }
 .people-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,.08); }
-.assistants-grid { grid-template-columns:repeat(4,1fr); }
-.person-card { background:var(--navy); }
+.organizers-grid { grid-template-columns:repeat(3,1fr); }
+.person-card { min-width:0; background:var(--navy); }
+.person-photo { position:relative; display:block; aspect-ratio:1; overflow:hidden; background:#0d1635; }
+.person-photo img { width:100%; height:100%; object-fit:cover; filter:grayscale(1); transition:filter .45s ease,transform .6s ease; }
+.person-photo:hover img { filter:grayscale(0); transform:scale(1.035); }
+.person-photo > span { position:absolute; z-index:2; top:.8rem; left:.9rem; color:rgba(255,255,255,.65); font-size:.6rem; text-shadow:0 1px 8px rgba(0,0,0,.45); }
+.sang-photo img { object-position:center 12%; }
+.mark-photo img { object-position:center 20%; }
+.greg-photo img { object-position:center 8%; }
 .photo-placeholder { position:relative; aspect-ratio:1; overflow:hidden; background:#0d1635; }
 .photo-placeholder.tone-2 { background:#1e3a8a; }
 .photo-placeholder.tone-3 { background:#122449; }
@@ -136,6 +142,8 @@ button { font:inherit; }
 .person-card > div:last-child { padding:1rem; border-top:1px solid rgba(255,255,255,.1); }
 .person-card p { margin:0 0 .55rem; color:var(--blue-400); font-size:.54rem; font-weight:700; letter-spacing:.11em; }
 .person-card h3 { margin:0; font:700 .9rem var(--display); }
+.person-card h3 a { color:inherit; text-decoration:none; }
+.person-card h3 a:hover { color:var(--blue-400); }
 .person-card h3+span { display:block; margin-top:.3rem; color:#475569; font-size:.65rem; }
 .compact-themes { margin-top:0; }
 .compact-themes section:last-child { border-bottom:0; }
