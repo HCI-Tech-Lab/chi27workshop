@@ -72,12 +72,17 @@ button { font:inherit; }
 .resource-heading p { margin:0; color:var(--slate); font-size:.82rem; }
 .resource-button { min-height:58px; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0 1.3rem; border:1px solid #aeb8c8; color:#31394d; background:#fff; font-size:.9rem; transition:.2s; }
 .resource-button b { color:#8792a4; font-size:.59rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+.resource-button:not([aria-disabled="true"]) { border-color:var(--blue); color:var(--blue); box-shadow:0 7px 20px rgba(21,93,252,.08); }
+.resource-button:not([aria-disabled="true"]) b { color:var(--blue); }
 .resource-button:not([aria-disabled="true"]):hover { border-color:var(--blue); color:var(--blue); transform:translateY(-2px); box-shadow:0 9px 24px rgba(21,93,252,.09); }
 .resource-primary { border-color:var(--navy-2); color:#fff; background:var(--navy-2); }
 .resource-primary b { color:#8e9bb4; }
 .resource-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.8rem; margin-top:1.8rem; }
 .resource-apply { border-color:var(--blue); color:var(--blue); }
-.resource-button[aria-disabled="true"] { cursor:not-allowed; }
+.resource-button[aria-disabled="true"] { pointer-events:none; cursor:not-allowed; opacity:.52; filter:saturate(0); color:#929aa7; border-color:#d5dae2; background:#eef1f5; box-shadow:none; }
+.resource-button[aria-disabled="true"] b { color:#9aa2ae; }
+.inline-link { color:var(--blue); font-weight:600; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+.inline-link:hover { color:#004bd8; }
 .next-pages { display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-top:4rem; background:var(--line); border:1px solid var(--line); }
 .next-pages a { min-height:128px; display:grid; grid-template-columns:1fr auto; align-content:center; padding:1.4rem; background:white; transition:.2s; }
 .next-pages a:hover { background:var(--navy-2); color:white; }
@@ -132,7 +137,7 @@ button { font:inherit; }
 .people-section .section-number { color:#38465f; }
 .section-heading-dark { margin-bottom:4rem; }
 .section-heading-dark h2 { margin:1.8rem 0 1rem; color:white; font:800 clamp(2.4rem,4vw,3.8rem)/1 var(--display); letter-spacing:-.05em; }
-.section-heading-dark > p { max-width:650px; margin:0; color:#64748b; font-size:.8rem; }
+.section-heading-dark > p { max-width:900px; margin:0; color:#64748b; font-size:.8rem; }
 .people-heading { display:flex; justify-content:space-between; gap:2rem; align-items:end; margin-bottom:1.2rem; }
 .people-heading span { color:#475569; font-size:.62rem; font-weight:700; letter-spacing:.12em; }
 .people-heading p { max-width:520px; margin:0; color:#475569; font-size:.72rem; text-align:right; }
@@ -149,11 +154,10 @@ button { font:inherit; }
 .greg-photo img { object-position:center 8%; }
 .kyung-hoon-photo img { object-fit:cover; object-position:center 18%; }
 .person-card > div:last-child { padding:1rem; border-top:1px solid rgba(255,255,255,.1); }
-.person-card p { margin:0 0 .55rem; color:var(--blue-400); font-size:.54rem; font-weight:700; letter-spacing:.11em; }
-.person-card h3 { margin:0; font:700 .9rem var(--display); }
-.person-card h3 a { color:var(--blue-400); text-decoration:none; }
-.person-card h3 a:hover { color:#8bb7ff; }
+.person-card h3 { margin:0; color:var(--blue-400); font:700 .9rem var(--display); }
 .person-card h3+span { display:block; margin-top:.3rem; color:#475569; font-size:.65rem; }
+.person-website { display:inline-flex; align-items:center; margin-top:.8rem; color:var(--blue-400); font-size:.62rem; font-weight:600; }
+.person-website:hover { color:#8bb7ff; }
 .compact-themes { margin-top:0; }
 .compact-themes section:last-child { border-bottom:0; }
 .theme-subhead { margin-top:4rem; }
