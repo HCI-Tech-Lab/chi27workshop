@@ -4,7 +4,7 @@
   <defs>
     <style>
       .st0 {
-        fill: #ffffff;
+        fill: #304879;
       }
 
       .st1 {
@@ -30,7 +30,7 @@
       }
     </style>
     <linearGradient id="linear-gradient" x1="581.67931" y1="8113.04265" x2="731.62608" y2="8004.5241" gradientTransform="translate(.13779 8361.74578) scale(1 -1)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0" stop-color="#304879"/>
       <stop offset="1" stop-color="#f4b32b"/>
     </linearGradient>
   </defs>
